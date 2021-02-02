@@ -8,7 +8,7 @@ def bootstrap(log_data, tail, p):
     fraction = 0.8 #Fraction of data to be retained in each bootstrap sample
     n_samples = 500 #number of bootstrap samples
 
-#Right tail with bootstrapping
+    #Right tail with bootstrapping
     ci_samples = []
 
     if tail == 'right':
@@ -21,7 +21,7 @@ def bootstrap(log_data, tail, p):
             n_infraction = len(r_right_fraction)
             ci_samples.append(n_infraction/np.sum(np.log(r_right_fraction/min(r_right_fraction))))
 
-        #ci_samples = sorted(ci_samples)
+    #Left tail with bootstrapping
     if tail == 'left':
 
         for _ in range(n_samples):
@@ -33,7 +33,7 @@ def bootstrap(log_data, tail, p):
             n_infraction = len(r_left_fraction)
             ci_samples.append(n_infraction/np.sum(np.log(r_left_fraction/min(r_left_fraction))))
 
-        #ci_samples = sorted(ci_samples)
+
     return sorted(ci_samples)
 
 
