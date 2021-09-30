@@ -1,1 +1,10 @@
-# datascience
+# Data Science Projects
+
+This repository stores data-oriented Jupyter Notebooks. The provided examples include well-studied ML models and are applied to financial sector datasets. The presented models include Logistic Regression, Kernel SVM, PCA, Random Forests, Body/tail calibration using MLE etc.
+
+1. **body_tail_calibration** demonstrates how to fit the right and left tails of distribution of returns using Maximum Likelihood. The distribution resembles power-law shape, one of the most seen distributions in finance. We then provide bootstrap analysis to assess stability. txt file provides the dataset under consideration. 
+2. **gaussian_kernel_pdf** shows how to fit Probability Density Function using Gaussian Kernels. For this purpose we use the same dataset as provided in **body_tail_calibration** folder.
+3. **loans** shows different techniques for default risk predictions, viewed as classification problem where 1 indicates if the loan was charged off and 0 otherwise. For these purposes we use Logistic Regression as benchmark model and then show how to use Decision Trees, Random Forests and these models with embeddings. We also use Gradient Boosting embedding together with Logistic Regression that is fitted using Tensorflow. For the detailed guide navigate to the ReadMe.md file in the folder. 
+4. **logit_reg** simply demonstrates how we can easily fit Logistic Regression using simulated data.
+5. **mult_regression** displays how we can use Multivariate regression if the dataset is heterogeneous. The full guide can be skimmed through in this article written by me on Medium: https://towardsdatascience.com/what-makes-a-movie-hit-a-jackpot-learning-from-data-with-multiple-linear-regression-339f6c1a7022
+6. **yelp_reviews_fitting** shows how to fit Discrete Power Law distribution for the user reviews statistics. We first construct frequency distributions and then plot histograms on the doubly logarithmic axes which helps to assert whether data resembles Power Law shape. We then fit in using Maximum Likelihood. Finally, we test Goodness-of-Fit using Kolmogorov-Smirnov test. 
